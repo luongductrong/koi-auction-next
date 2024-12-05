@@ -1,6 +1,6 @@
 /** @format */
 
-export interface User {
+export default interface User {
   UserID: number;
   Role: 'Admin' | 'Staff' | 'Breeder' | 'User';
   UserName: string;

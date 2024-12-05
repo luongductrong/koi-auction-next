@@ -1,10 +1,12 @@
 /** @format */
 
-// app/api/swagger/route.ts
+import { NextResponse } from 'next/server';
 import swaggerSpec from '@/app/api-docs/swagger';
 
 export async function GET() {
-  return new Response(JSON.stringify(swaggerSpec), {
-    headers: { 'Content-Type': 'application/json' },
-  });
+  try {
+    return NextResponse.json(swaggerSpec, { status: 200 });
+  } catch {
+    return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
+  }
 }

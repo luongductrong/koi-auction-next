@@ -1,7 +1,7 @@
 /** @format */
 
 import { NextResponse } from 'next/server';
-import { UserService } from '@/services/user';
+import UserService from '@/services/user';
 import { UserLoginResponse } from '@/models/user';
 import { generateToken } from '@/utils/jwt';
 
