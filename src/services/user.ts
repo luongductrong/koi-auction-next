@@ -2,12 +2,63 @@
 
 // src/services/userService.ts
 import { User } from '../models/user';
+import { UserResponse } from '../models/user';
 import { users } from '../data/users';
 
 export class UserService {
   constructor() {}
 
-  async getUsers(): Promise<User[]> {
-    return users;
+  async getUsers(): Promise<UserResponse[]> {
+    try {
+      const usersResponse: UserResponse[] = users.map((user) => {
+        return {
+          id: user.UserID,
+          role: user.Role,
+          userName: user.UserName,
+          fullName: user.FullName,
+          phoneNumber: user.PhoneNumber,
+          email: user.Email,
+          address: user.Address,
+          createdAt: user.CreatedAt,
+          updatedAt: user.UpdatedAt,
+          status: user.Status,
+        };
+      });
+      return usersResponse;
+    } catch (error) {
+      if (error instanceof Error) {
+        throw new Error(error.message);
+      } else {
+        throw new Error('An unknown error occurred');
+      }
+    }
+  }
+
+  async getUserById(id: number): Promise<UserResponse | undefined> {
+    try {
+      const user: User | undefined = users.find((user) => user.UserID === id);
+      if (!user) {
+        return undefined;
+      }
+      const userResponse: UserResponse = {
+        id: user.UserID,
+        role: user.Role,
+        userName: user.UserName,
+        fullName: user.FullName,
+        phoneNumber: user.PhoneNumber,
+        email: user.Email,
+        address: user.Address,
+        createdAt: user.CreatedAt,
+        updatedAt: user.UpdatedAt,
+        status: user.Status,
+      };
+      return userResponse;
+    } catch (error) {
+      if (error instanceof Error) {
+        throw new Error(error.message);
+      } else {
+        throw new Error('An unknown error occurred');
+      }
+    }
   }
 }

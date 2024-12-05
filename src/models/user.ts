@@ -13,3 +13,16 @@ export interface User {
   UpdatedAt: string;
   Status: 'Active' | 'Inactive';
 }
+
+export interface UserResponse {
+  id: number;
+  role: 'Admin' | 'Staff' | 'Breeder' | 'User';
+  userName: string;
+  fullName: string | null;
+  phoneNumber: string | null;
+  email: string | null;
+  address: string | null;
+  createdAt: string;
+  updatedAt: string;
+  status: 'Active' | 'Inactive';
+}
