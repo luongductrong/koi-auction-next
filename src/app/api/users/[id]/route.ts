@@ -1,12 +1,12 @@
 /** @format */
 
-import { NextResponse, NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 import { UserResponse } from '@/models/user';
 import { UserService } from '@/services/user';
 
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const { id } = await params;
+    const id = (await params).id;
 
     if (!id) {
       return NextResponse.json({ message: 'ID is required' }, { status: 400 });
