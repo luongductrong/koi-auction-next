@@ -15,7 +15,8 @@ export function generateToken(payload: object): string {
 export function verifyToken(token: string): object | string | null {
   try {
     return jwt.verify(token, SECRET_KEY);
-  } catch {
+  } catch (error) {
+    console.error('Error verifying token', error);
     return null;
   }
 }
