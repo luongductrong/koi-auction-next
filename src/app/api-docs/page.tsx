@@ -11,7 +11,9 @@ const SwaggerUI = dynamic(() => import('swagger-ui-react'), {
   ssr: false,
   loading: () => (
     <div className="h-screen w-screen flex justify-center items-center">
-      <Loading color="primary" size="large" />
+      <Loading color="primary" size="large" textClassName="font-bold">
+        Loading API documentation...
+      </Loading>
     </div>
   ), // Loading UI
 });
