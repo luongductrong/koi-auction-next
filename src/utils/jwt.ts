@@ -8,14 +8,14 @@ const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN_MIN || '15';
 
 // Function to generate a token
 export function generateToken(payload: object): string {
-  return jwt.sign(payload, SECRET_KEY, { expiresIn: JWT_EXPIRES_IN });
+  const expiresIn = parseInt(JWT_EXPIRES_IN) * 60;
+  return jwt.sign(payload, SECRET_KEY, { expiresIn: expiresIn });
 }
 
 export function verifyToken(token: string): object | string | null {
   try {
     return jwt.verify(token, SECRET_KEY);
-  } catch (error) {
-    console.error(error);
+  } catch {
     return null;
   }
 }

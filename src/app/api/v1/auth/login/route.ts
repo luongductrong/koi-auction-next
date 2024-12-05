@@ -11,6 +11,7 @@ export async function POST(req: Request) {
   try {
     const { username, password } = await req.json();
     const userService = new UserService();
+
     const user = await userService.getUserByUsernameOrEmail(username);
 
     if (!username || !password || username === '' || password === '') {
@@ -44,4 +45,8 @@ export async function POST(req: Request) {
     console.error(error);
     return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
   }
+}
+
+export async function GET() {
+  return NextResponse.json({ message: 'Method not allowed' }, { status: 405 });
 }
