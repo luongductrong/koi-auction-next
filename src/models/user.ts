@@ -36,3 +36,9 @@ export interface UserLoginResponse {
   fullName: string | null;
   isFullInfo: boolean;
 }
+
+export interface UserJWT {
+  id: number;
+  username: string;
+  role: 'Admin' | 'Staff' | 'Breeder' | 'User';
+}

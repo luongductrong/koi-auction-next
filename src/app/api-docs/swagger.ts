@@ -53,6 +53,143 @@ const swaggerSpec = {
         },
       },
     },
+    '/auth/login': {
+      post: {
+        tags: ['Authentications'],
+        summary: 'Login',
+        description: 'Login with the provided credentials to obtain a JWT token.',
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: {
+                type: 'object',
+                properties: {
+                  username: {
+                    type: 'string',
+                    example: 'johndoe',
+                  },
+                  password: {
+                    type: 'string',
+                    example: 'yourpassword',
+                  },
+                },
+                required: ['username', 'password'],
+              },
+            },
+          },
+        },
+        responses: {
+          '200': {
+            description: 'Login successful. Returns user information and a JWT token.',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    token: {
+                      type: 'string',
+                      description: 'JWT token for authenticated requests',
+                      example: 'eyJhbGciOiJIUzI1NiIsInR...',
+                    },
+                    expires: {
+                      type: 'number',
+                      description: 'Expiration time of the token in milliseconds',
+                      example: 1685152000000,
+                    },
+                    userId: {
+                      type: 'string',
+                      example: '12345',
+                    },
+                    role: {
+                      type: 'string',
+                      example: 'user',
+                    },
+                    userName: {
+                      type: 'string',
+                      example: 'johndoe',
+                    },
+                    fullName: {
+                      type: 'string',
+                      example: 'John Doe',
+                    },
+                    isFullInfo: {
+                      type: 'boolean',
+                      description: 'Indicates whether the user profile has full information',
+                      example: true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+          '400': {
+            description: 'Bad request. Username and password are required.',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    message: {
+                      type: 'string',
+                      example: 'Username and password are required',
+                    },
+                  },
+                },
+              },
+            },
+          },
+          '401': {
+            description: 'Unauthorized. Invalid credentials.',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    message: {
+                      type: 'string',
+                      example: 'Invalid credentials',
+                    },
+                  },
+                },
+              },
+            },
+          },
+          '403': {
+            description: 'Forbidden. User is banned.',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    message: {
+                      type: 'string',
+                      example: 'User is banned',
+                    },
+                  },
+                },
+              },
+            },
+          },
+          '500': {
+            description: 'Internal server error.',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    message: {
+                      type: 'string',
+                      example: 'Internal server error',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
     '/auctions': {
       get: {
         tags: ['Auctions'],
