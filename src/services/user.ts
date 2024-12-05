@@ -4,6 +4,7 @@
 import { User } from '../models/user';
 import { UserResponse } from '../models/user';
 import { users } from '../data/users';
+import { comparePassword } from '@/utils/hash-password';
 
 export class UserService {
   constructor() {}
@@ -53,6 +54,33 @@ export class UserService {
         status: user.Status,
       };
       return userResponse;
+    } catch (error) {
+      if (error instanceof Error) {
+        throw new Error(error.message);
+      } else {
+        throw new Error('An unknown error occurred');
+      }
+    }
+  }
+
+  async getUserByUsernameOrEmail(usernameOrEmail: string): Promise<User | undefined> {
+    try {
+      const user: User | undefined = users.find(
+        (user) => user.UserName === usernameOrEmail || user.Email === usernameOrEmail,
+      );
+      return user;
+    } catch (error) {
+      if (error instanceof Error) {
+        throw new Error(error.message);
+      } else {
+        throw new Error('An unknown error occurred');
+      }
+    }
+  }
+
+  async verifyPassword(password: string, hash: string): Promise<boolean> {
+    try {
+      return await comparePassword(password, hash);
     } catch (error) {
       if (error instanceof Error) {
         throw new Error(error.message);

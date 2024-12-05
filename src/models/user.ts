@@ -26,3 +26,13 @@ export interface UserResponse {
   updatedAt: string;
   status: 'Active' | 'Inactive';
 }
+
+export interface UserLoginResponse {
+  token: string;
+  expires: number;
+  userId: number;
+  role: 'Admin' | 'Staff' | 'Breeder' | 'User';
+  userName: string;
+  fullName: string | null;
+  isFullInfo: boolean;
+}
