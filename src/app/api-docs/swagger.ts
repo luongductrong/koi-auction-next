@@ -13,6 +13,9 @@ const swaggerSpec = {
       url: 'http://localhost:3000/api',
     },
     {
+      url: 'https://koi-next.vercel.app/api',
+    },
+    {
       url: 'https://koi-auction.vercel.app/api',
     },
   ],
