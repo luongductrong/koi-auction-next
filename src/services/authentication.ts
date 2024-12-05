@@ -3,14 +3,14 @@
 import { NextRequest } from 'next/server';
 import { verifyToken } from '@/utils/jwt';
 
-interface Authentications {
+interface AuthenticationServiceInterface {
   decodeToken(request: Request | NextRequest): Promise<any>;
   decodeRole(request: Request | NextRequest): Promise<string | null>;
   decodeId(request: Request | NextRequest): Promise<number | null>;
   roleBasedAccess(request: Request | NextRequest, accessRole: string[], accessId?: number): Promise<string>;
 }
 
-export class AuthenticationService implements Authentications {
+export default class AuthenticationService implements AuthenticationServiceInterface {
   constructor() {}
 
   async decodeToken(request: Request | NextRequest) {

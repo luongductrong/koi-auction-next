@@ -27,6 +27,9 @@ const swaggerSpec = {
       name: 'Authentications',
     },
     {
+      name: 'System Configurations',
+    },
+    {
       name: 'Users',
     },
     {
@@ -249,6 +252,63 @@ const swaggerSpec = {
                   properties: {
                     id: { type: 'string', example: '123' },
                     name: { type: 'string', example: 'Auction A' },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/systems': {
+      get: {
+        tags: ['System Configurations'],
+        summary: 'Get System Configurations',
+        description: 'Retrieve all system fee configurations.',
+        responses: {
+          '200': {
+            description: 'Successful response',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    breederDeposit: { type: 'number', example: 0.2 },
+                    auctionFee: { type: 'number', example: 500000.0 },
+                    withdrawFree: { type: 'number', example: 0.01 },
+                    withdrawFeeMin: { type: 'number', example: 50000.0 },
+                  },
+                },
+              },
+            },
+          },
+          '401': {
+            description: 'Unauthorized',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    message: {
+                      type: 'string',
+                      example: 'Unauthorized',
+                    },
+                  },
+                },
+              },
+            },
+          },
+          '500': {
+            description: 'Internal server error',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    message: {
+                      type: 'string',
+                      example: 'Internal server error',
+                    },
                   },
                 },
               },

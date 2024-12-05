@@ -3,8 +3,8 @@
 
 import { NextResponse } from 'next/server';
 import { UserResponse } from '@/models/user';
-import { UserService } from '@/services/user';
-import { AuthenticationService } from '@/services/authentication';
+import UserService from '@/services/user';
+import AuthenticationService from '@/services/authentication';
 
 const ACCESS_ROLE = ['Admin'];
 

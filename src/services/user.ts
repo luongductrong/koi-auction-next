@@ -1,12 +1,11 @@
 /** @format */
 
 // src/services/userService.ts
-import { User } from '../models/user';
-import { UserResponse } from '../models/user';
+import User, { UserResponse } from '../models/user';
 import { users } from '../data/users';
 import { comparePassword } from '@/utils/hash-password';
 
-export class UserService {
+export default class UserService {
   constructor() {}
 
   async getUsers(): Promise<UserResponse[]> {
