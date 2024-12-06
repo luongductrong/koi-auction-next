@@ -9,7 +9,7 @@ interface LoadingProps extends Omit<React.HTMLProps<HTMLDivElement>, 'size'> {
   children?: React.ReactNode;
 }
 
-const Loading: React.FC<LoadingProps> = ({
+const Loading = ({
   size = 'default',
   color = 'primary',
   className,
@@ -17,7 +17,7 @@ const Loading: React.FC<LoadingProps> = ({
   style,
   children,
   ...props
-}) => {
+}: LoadingProps) => {
   const sizeClasses = {
     small: 'w-4 h-4 border-2',
     default: 'w-8 h-8 border-4',

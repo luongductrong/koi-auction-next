@@ -1,7 +1,7 @@
 /** @format */
 
 import { NextResponse } from 'next/server';
-import swaggerSpec from '@/app/api-docs/swagger';
+import swaggerSpec from '@/app/swagger-ui/swagger';
 
 export async function GET() {
   try {

@@ -4,10 +4,12 @@
 
 import React from 'react';
 import Loading from '@/components/Loading';
+import Logo from '@/components/Logo';
 
 const LoadingDemo = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center space-y-8 p-4">
+      <Logo>KoiAuction</Logo>
       <h1 className="text-2xl font-bold mb-4">Loading Component Demo</h1>
 
       <div className="space-y-4">

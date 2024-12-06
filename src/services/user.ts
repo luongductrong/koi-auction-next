@@ -3,7 +3,7 @@
 // src/services/userService.ts
 import User, { UserResponse } from '../models/user';
 import { users } from '../data/users';
-import { comparePassword } from '@/utils/hash-password';
+import { comparePassword } from '@/utils/hashPassword';
 
 export default class UserService {
   constructor() {}
