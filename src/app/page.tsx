@@ -3,13 +3,17 @@
 'use client';
 
 import React from 'react';
-import Loading from '@/components/loading2';
-import Logo from '@/components/logo2';
+import Loading from '@/components/loading';
+import Logo from '@/components/logo';
+import { AuthButtons } from '@/components/header-auth-button';
+import { Search } from '@/components/search';
 
 const LoadingDemo = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center space-y-8 p-4">
       <Logo>KoiAuction</Logo>
+      <AuthButtons />
+      <Search placeholder="Tìm kiếm..." />
       <h1 className="text-2xl font-bold mb-4">Loading Component Demo</h1>
 
       <div className="space-y-4">

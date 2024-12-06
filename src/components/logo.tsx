@@ -11,8 +11,8 @@ const Logo = ({ children }: LogoProps) => {
   return (
     <Link
       href="/"
-      className="flex items-center no-underline text-primary hover:text-orange-500 
-                fill-primary hover:fill-orange-500 transition-colors duration-300 ease-in-out"
+      className="flex items-center no-underline text-main hover:text-orange-500 
+                fill-main hover:fill-orange-500 transition-colors duration-300 ease-in-out"
     >
       <svg className="w-[24px] h-[24px]" viewBox="50 145 790 790">
         <g>
