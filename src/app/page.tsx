@@ -3,8 +3,8 @@
 'use client';
 
 import React from 'react';
-import Loading from '@/components/Loading';
-import Logo from '@/components/Logo';
+import Loading from '@/components/loading2';
+import Logo from '@/components/logo2';
 
 const LoadingDemo = () => {
   return (
