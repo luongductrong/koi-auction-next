@@ -7,7 +7,7 @@ interface LogoProps {
   children: React.ReactNode;
 }
 
-const Logo = ({ children }: LogoProps) => {
+export default function Logo({ children }: LogoProps) {
   return (
     <Link
       href="/"
@@ -42,6 +42,4 @@ const Logo = ({ children }: LogoProps) => {
       <h1 className="font-[Righteous] font-normal text-2xl m-0 leading-[30px] uppercase">{children}</h1>
     </Link>
   );
-};
-
-export default Logo;
+}

@@ -10,7 +10,7 @@ interface SearchProps {
   placeholder?: string;
 }
 
-export function Search({ placeholder }: SearchProps) {
+export default function Search({ placeholder }: SearchProps) {
   return (
     <div className="flex w-full max-w-sm items-center space-x-2">
       <Input type="text" placeholder={placeholder} className="w-full" />

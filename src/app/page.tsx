@@ -5,8 +5,10 @@
 import React from 'react';
 import Loading from '@/components/loading';
 import Logo from '@/components/logo';
-import { AuthButtons } from '@/components/header-auth-button';
-import { Search } from '@/components/search';
+import AuthButtons from '@/components/header-auth-button';
+import Search from '@/components/search';
+import LanguageSwitcher from '@/components/language-switcher';
+import ThemeSwitcher from '@/components/theme-switcher';
 
 const LoadingDemo = () => {
   return (
@@ -14,6 +16,8 @@ const LoadingDemo = () => {
       <Logo>KoiAuction</Logo>
       <AuthButtons />
       <Search placeholder="Tìm kiếm..." />
+      <LanguageSwitcher />
+      <ThemeSwitcher />
       <h1 className="text-2xl font-bold mb-4">Loading Component Demo</h1>
 
       <div className="space-y-4">

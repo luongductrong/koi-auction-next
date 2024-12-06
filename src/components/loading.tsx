@@ -9,7 +9,7 @@ interface LoadingProps extends Omit<React.HTMLProps<HTMLDivElement>, 'size'> {
   children?: React.ReactNode;
 }
 
-const Loading = ({
+export default function Loading({
   size = 'default',
   color = 'primary',
   className,
@@ -17,7 +17,7 @@ const Loading = ({
   style,
   children,
   ...props
-}: LoadingProps) => {
+}: LoadingProps) {
   const sizeClasses = {
     small: 'w-4 h-4 border-2',
     default: 'w-8 h-8 border-4',
@@ -42,6 +42,4 @@ const Loading = ({
       {children && <div className={`mt-2 text-center ${textClassName}`}>{children}</div>}
     </div>
   );
-};
-
-export default Loading;
+}
