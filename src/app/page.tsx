@@ -5,22 +5,12 @@
 import React from 'react';
 import Loading from '@/components/loading';
 import Logo from '@/components/header-logo';
-import AuthButtons from '@/components/header-auth-buttons';
-import Search from '@/components/search';
-import LanguageSwitcher from '@/components/language-switcher';
-import ThemeSwitcher from '@/components/theme-switcher';
-import Header from '@/components/header';
 
 const LoadingDemo = () => {
   return (
     <>
-      <Header />
       <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center space-y-8 p-4">
         <Logo>KoiAuction</Logo>
-        <AuthButtons />
-        <Search placeholder="Tìm kiếm..." />
-        <LanguageSwitcher />
-        <ThemeSwitcher />
         <h1 className="text-2xl font-bold mb-4">Loading Component Demo</h1>
 
         <div className="space-y-4">
