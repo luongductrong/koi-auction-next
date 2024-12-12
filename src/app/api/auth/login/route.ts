@@ -5,8 +5,6 @@ import UserService from '@/services/user';
 import { UserLoginResponse } from '@/models/user';
 import { generateToken } from '@/utils/jwt';
 
-const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN_MIN || '15';
-
 export async function POST(req: Request) {
   try {
     const { username, password } = await req.json();
@@ -31,10 +29,6 @@ export async function POST(req: Request) {
 
     const userResponse: UserLoginResponse = {
       token,
-      expires: Date.now() + parseInt(JWT_EXPIRES_IN) * 60 * 1000,
-      userId: user.UserID,
-      role: user.Role,
-      userName: user.UserName,
       fullName: user.FullName,
       isFullInfo: user.FullName !== null && user.PhoneNumber !== null && user.Email !== null && user.Address !== null,
     };

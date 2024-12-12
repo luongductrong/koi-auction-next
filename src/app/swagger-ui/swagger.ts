@@ -73,11 +73,11 @@ const swaggerSpec = {
                 properties: {
                   username: {
                     type: 'string',
-                    example: 'johndoe',
+                    example: 'user',
                   },
                   password: {
                     type: 'string',
-                    example: 'yourpassword',
+                    example: '1',
                   },
                 },
                 required: ['username', 'password'],
@@ -97,23 +97,6 @@ const swaggerSpec = {
                       type: 'string',
                       description: 'JWT token for authenticated requests',
                       example: 'eyJhbGciOiJIUzI1NiIsInR...',
-                    },
-                    expires: {
-                      type: 'number',
-                      description: 'Expiration time of the token in milliseconds',
-                      example: 1685152000000,
-                    },
-                    userId: {
-                      type: 'string',
-                      example: '12345',
-                    },
-                    role: {
-                      type: 'string',
-                      example: 'user',
-                    },
-                    userName: {
-                      type: 'string',
-                      example: 'johndoe',
                     },
                     fullName: {
                       type: 'string',
@@ -171,22 +154,6 @@ const swaggerSpec = {
                     message: {
                       type: 'string',
                       example: 'User is banned',
-                    },
-                  },
-                },
-              },
-            },
-          },
-          '500': {
-            description: 'Internal server error.',
-            content: {
-              'application/json': {
-                schema: {
-                  type: 'object',
-                  properties: {
-                    message: {
-                      type: 'string',
-                      example: 'Internal server error',
                     },
                   },
                 },
@@ -292,22 +259,6 @@ const swaggerSpec = {
                     message: {
                       type: 'string',
                       example: 'Unauthorized',
-                    },
-                  },
-                },
-              },
-            },
-          },
-          '500': {
-            description: 'Internal server error',
-            content: {
-              'application/json': {
-                schema: {
-                  type: 'object',
-                  properties: {
-                    message: {
-                      type: 'string',
-                      example: 'Internal server error',
                     },
                   },
                 },
