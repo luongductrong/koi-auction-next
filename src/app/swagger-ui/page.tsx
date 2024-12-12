@@ -4,8 +4,8 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import swaggerSpec from '@/app/api-docs/swagger';
-import Loading from '@/components/Loading';
+import swaggerSpec from '@/app/swagger-ui/swagger';
+import Loading from '@/components/loading';
 
 const SwaggerUI = dynamic(() => import('swagger-ui-react'), {
   ssr: false,
