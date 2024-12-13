@@ -1,6 +1,8 @@
 /** @format */
 
-import { Providers } from './providers';
+import React from 'react';
+import { AntdRegistry } from '@ant-design/nextjs-registry';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
 
@@ -12,11 +14,13 @@ const montserrat = Montserrat({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <title>Koi Auction</title>
+      </head>
       <body className={montserrat.className}>
-        <Providers attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {children}
-        </Providers>
+        <NextThemesProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <AntdRegistry>{children}</AntdRegistry>
+        </NextThemesProvider>
       </body>
     </html>
   );
