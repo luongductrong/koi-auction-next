@@ -4,6 +4,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import swaggerSpec from '@/app/swagger-ui/swagger';
 import Loading from '@/components/loading';
 
@@ -21,5 +22,16 @@ const SwaggerUI = dynamic(() => import('swagger-ui-react'), {
 import 'swagger-ui-react/swagger-ui.css';
 
 export default function ApiDocs() {
-  return <SwaggerUI spec={swaggerSpec} />;
+  return (
+    <>
+      <Head>
+        <title>API Documentation</title>
+      </Head>
+      <SwaggerUI spec={swaggerSpec} />
+    </>
+  );
+}
+
+{
+  /* <SwaggerUI url="https://petstore.swagger.io/v2/swagger.json" /> */
 }

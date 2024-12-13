@@ -2,7 +2,7 @@
 
 // src/services/userService.ts
 import type User from '../models/user';
-import type { UserResponse } from '../models/user';
+import { type UserResponse } from '../models/user';
 import { USERS } from '../data/users';
 import { comparePassword } from '@/utils/hash-password';
 

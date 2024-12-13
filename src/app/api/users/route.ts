@@ -1,7 +1,7 @@
 /** @format */
 
 import { NextRequest, NextResponse } from 'next/server';
-import type { UserResponse } from '@/models/user';
+import { type UserResponse } from '@/models/user';
 import UserService from '@/services/user';
 import AuthenticationService from '@/services/authentication';
 
