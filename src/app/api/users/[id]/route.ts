@@ -2,7 +2,7 @@
 // src/app/api/users/[id]/route.ts
 
 import { NextResponse } from 'next/server';
-import { UserResponse } from '@/models/user';
+import type { UserResponse } from '@/models/user';
 import UserService from '@/services/user';
 import AuthenticationService from '@/services/authentication';
 

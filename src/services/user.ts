@@ -1,8 +1,9 @@
 /** @format */
 
 // src/services/userService.ts
-import User, { UserResponse } from '../models/user';
-import { users } from '../data/users';
+import type User from '../models/user';
+import type { UserResponse } from '../models/user';
+import { USERS } from '../data/users';
 import { comparePassword } from '@/utils/hash-password';
 
 export default class UserService {
@@ -10,7 +11,7 @@ export default class UserService {
 
   async getUsers(): Promise<UserResponse[]> {
     try {
-      const usersResponse: UserResponse[] = users.map((user) => {
+      const usersResponse: UserResponse[] = USERS.map((user) => {
         return {
           id: user.UserID,
           role: user.Role,
@@ -36,7 +37,7 @@ export default class UserService {
 
   async getUserById(id: number): Promise<UserResponse | undefined> {
     try {
-      const user: User | undefined = users.find((user) => user.UserID === id);
+      const user: User | undefined = USERS.find((user) => user.UserID === id);
       if (!user) {
         return undefined;
       }
@@ -64,7 +65,7 @@ export default class UserService {
 
   async getUserByUsernameOrEmail(usernameOrEmail: string): Promise<User | undefined> {
     try {
-      const user: User | undefined = users.find(
+      const user: User | undefined = USERS.find(
         (user) => user.UserName === usernameOrEmail || user.Email === usernameOrEmail,
       );
       return user;

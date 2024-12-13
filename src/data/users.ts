@@ -1,7 +1,7 @@
 /** @format */
-import User from '../models/user';
+import type User from '../models/user';
 
-export const users: User[] = [
+export const USERS: User[] = [
   {
     UserID: 1,
     Role: 'Admin',
