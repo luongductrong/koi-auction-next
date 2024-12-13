@@ -1,23 +1,23 @@
 /** @format */
 
-import { systems } from '../data/systems';
+import { SYSTEMS } from '../data/systems';
 
-interface SystemServiceInterface {
+interface SYSTEMServiceInterface {
   getSystemFeeInfor(): Promise<Record<string, any> | null>;
 }
 
-export default class SystemService implements SystemServiceInterface {
+export default class SYSTEMService implements SYSTEMServiceInterface {
   constructor() {}
 
   async getSystemFeeInfor() {
     try {
-      if (!systems || systems.length === 0) {
-        throw new Error('Null or empty systems');
+      if (!SYSTEMS || SYSTEMS.length === 0) {
+        throw new Error('Null or empty SYSTEMS');
       }
 
       // Convert array to object
       const systemInfo: Record<string, any> = {};
-      systems.forEach((system) => {
+      SYSTEMS.forEach((system) => {
         const camelCaseName = this.toCamelCase(system.Name);
         systemInfo[camelCaseName] = system.Value;
       });

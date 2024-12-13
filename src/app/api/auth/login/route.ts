@@ -2,7 +2,7 @@
 
 import { NextResponse } from 'next/server';
 import UserService from '@/services/user';
-import { UserLoginResponse } from '@/models/user';
+import type { UserLoginResponse } from '@/models/user';
 import { generateToken } from '@/utils/jwt';
 
 export async function POST(req: Request) {
