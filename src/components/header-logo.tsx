@@ -1,11 +1,17 @@
 /** @format */
 
 import React from 'react';
+import { Righteous } from 'next/font/google';
 import Link from 'next/link';
 
 interface LogoProps {
   children: React.ReactNode;
 }
+
+const righteous = Righteous({
+  subsets: ['latin'],
+  weight: ['400'],
+});
 
 export default function Logo({ children }: LogoProps) {
   return (
@@ -39,7 +45,7 @@ export default function Logo({ children }: LogoProps) {
           ></path>
         </g>
       </svg>
-      <h1 className="font-[Righteous] font-normal text-2xl m-0 leading-[30px] uppercase">{children}</h1>
+      <h1 className={`${righteous.className} text-2xl m-0 leading-[30px] uppercase`}>{children}</h1>
     </Link>
   );
 }

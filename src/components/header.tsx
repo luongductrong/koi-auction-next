@@ -1,0 +1,25 @@
+/** @format */
+
+import React from 'react';
+import { Layout } from 'antd';
+import HeaderLogo from './header-logo';
+import HeaderMenu from './header-menu';
+import HeaderSearch from './header-search';
+import HeaderButtonGroup from './header-button-group';
+
+const { Header } = Layout;
+
+export default function CustomHeader() {
+  return (
+    <Header className="fixed top-0 left-0 z-50 w-screen min-h-min py-2 px-0 !bg-white shadow-md shadow-gray-200">
+      <div className="relative block w-full">
+        <div className="flex flex-row justify-between items-center w-full py-3 px-0">
+          <HeaderLogo>Koi Auction</HeaderLogo>
+          <HeaderSearch />
+          <HeaderButtonGroup />
+        </div>
+        <HeaderMenu />
+      </div>
+    </Header>
+  );
+}

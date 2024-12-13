@@ -1,6 +1,5 @@
 /** @format */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +16,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
+@media (prefers-color-scheme: dark) {
+  .swagger-ui {
+    background-color: #ffffff !important;
+  }
 }
