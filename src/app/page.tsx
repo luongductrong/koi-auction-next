@@ -4,19 +4,13 @@
 
 import React from 'react';
 import Loading from '@/components/loading';
-import Logo from '@/components/header-logo';
-import Menu from '@/components/header-menu';
-import Search from '@/components/header-search';
-import Butons from '@/components/header-button-group';
+import Header from '@/components/header';
 
 const LoadingDemo = () => {
   return (
     <>
       <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center space-y-8 p-4">
-        <Logo>KoiAuction</Logo>
-        <Menu />
-        <Search />
-        <Butons />
+        <Header />
         <h1 className="text-2xl font-bold mb-4">Loading Component Demo</h1>
 
         <div className="space-y-4">

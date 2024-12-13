@@ -57,7 +57,7 @@ const items: MenuProps['items'] = [
 
 export default function HeaderButtonGroup() {
   return (
-    <div className="flex flex-row">
+    <div className="leading-normal">
       {false ? (
         <Dropdown menu={{ items }} trigger={['hover']} arrow>
           <Button type="primary">Tên người dùng</Button>
@@ -69,7 +69,7 @@ export default function HeaderButtonGroup() {
               Đăng nhập
             </Button>
           </Link>
-          <Link href="/register" className="leading-4 ml-2.5">
+          <Link href="/register" className="ml-2.5">
             <Button type="primary">Đăng ký</Button>
           </Link>
         </>

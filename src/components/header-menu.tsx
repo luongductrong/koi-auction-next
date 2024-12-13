@@ -14,10 +14,11 @@ export default function Menu() {
     {
       key: 'sub1',
       label: (
-        <p className="font-medium pr-48">
-          <UnorderedListOutlined /> Cuộc đấu giá
+        <p className="flex items-center font-medium pr-48 text-white">
+          <UnorderedListOutlined className="pr-1" /> Cuộc đấu giá
         </p>
       ),
+      className: '!bg-main',
       children: [
         { key: 'all', label: <Link href="/auction">Tất cả đấu giá</Link> },
         { key: 'schedule', label: <Link href="/auction?status=scheduled">Đấu giá sắp diễn ra</Link> },
@@ -32,5 +33,12 @@ export default function Menu() {
     { key: '/blog', label: <Link href="/blog">Blog</Link> },
   ];
 
-  return <AntMenu mode="horizontal" className="h-auto leading-10" items={menuItems} selectedKeys={[currentPath]} />;
+  return (
+    <AntMenu
+      mode="horizontal"
+      className="h-auto !leading-10 font-normal text-sm w-full"
+      items={menuItems}
+      selectedKeys={[currentPath]}
+    />
+  );
 }
