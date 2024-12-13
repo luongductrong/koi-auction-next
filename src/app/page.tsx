@@ -7,6 +7,7 @@ import Loading from '@/components/loading';
 import Logo from '@/components/header-logo';
 import Menu from '@/components/header-menu';
 import Search from '@/components/header-search';
+import Butons from '@/components/header-button-group';
 
 const LoadingDemo = () => {
   return (
@@ -15,6 +16,7 @@ const LoadingDemo = () => {
         <Logo>KoiAuction</Logo>
         <Menu />
         <Search />
+        <Butons />
         <h1 className="text-2xl font-bold mb-4">Loading Component Demo</h1>
 
         <div className="space-y-4">
