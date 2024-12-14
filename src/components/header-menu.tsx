@@ -1,7 +1,6 @@
 /** @format */
 
-import { Menu as AntMenu } from 'antd';
-import { type MenuProps } from 'antd';
+import { Menu as AntMenu, type MenuProps } from 'antd';
 import { UnorderedListOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 

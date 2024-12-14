@@ -1,8 +1,7 @@
 /** @format */
 
 import React from 'react';
-import { Button, Dropdown } from 'antd';
-import { type MenuProps } from 'antd';
+import { Button, Dropdown, type MenuProps } from 'antd';
 import { LogoutOutlined, UserOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 

@@ -6,6 +6,7 @@ import HeaderLogo from './header-logo';
 import HeaderMenu from './header-menu';
 import HeaderSearch from './header-search';
 import HeaderButtonGroup from './header-button-group';
+import HeaderThemeLanguage from './header-theme-language-switcher';
 
 const { Header } = Layout;
 
@@ -18,7 +19,10 @@ export default function CustomHeader() {
           <HeaderSearch />
           <HeaderButtonGroup />
         </div>
-        <HeaderMenu />
+        <div className="flex">
+          <HeaderMenu />
+          <HeaderThemeLanguage />
+        </div>
       </div>
     </Header>
   );

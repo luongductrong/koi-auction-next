@@ -25,6 +25,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               theme={{
                 token: {
                   colorPrimary: '#b41712',
+                  borderRadius: 4,
+                  fontFamily: "'Montserrat', sans-serif",
                 },
               }}
             >
