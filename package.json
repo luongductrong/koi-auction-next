@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/cssinjs": "^1.18.2",
     "@ant-design/icons": "^5.5.2",
     "@ant-design/nextjs-registry": "^1.0.2",
     "antd": "^5.22.4",
@@ -16,10 +17,10 @@
     "clsx": "^2.1.1",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.468.0",
-    "next": "15.1.0",
+    "next": "^15.1.0",
     "next-themes": "^0.4.4",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "swagger-ui-react": "^5.18.2"
   },
   "devDependencies": {
