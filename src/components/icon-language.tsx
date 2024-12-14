@@ -9,7 +9,7 @@ interface LanguageIconProps {
   style?: React.CSSProperties;
 }
 
-export default function LanguageIcon({ className, width = '800px', height = '800px', style }: LanguageIconProps) {
+export function LanguageIcon({ className, width = '800px', height = '800px', style }: LanguageIconProps) {
   return (
     <svg
       width={width}

@@ -4,8 +4,8 @@
 
 import React from 'react';
 import { Switch, Dropdown, Space, type MenuProps } from 'antd';
-import { SunOutlined, MoonOutlined, GlobalOutlined } from '@ant-design/icons';
-import LanguageIcon from './icon-language';
+import { SunOutlined, MoonOutlined } from '@ant-design/icons';
+import { LanguageIcon } from './icon-language';
 
 const languageItems: MenuProps['items'] = [
   {
