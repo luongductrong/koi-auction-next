@@ -1,5 +1,7 @@
 /** @format */
 
+'use client';
+
 import React from 'react';
 import { Layout } from 'antd';
 import HeaderLogo from './header-logo';

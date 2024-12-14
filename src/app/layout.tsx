@@ -7,10 +7,13 @@ import { ConfigProvider } from 'antd';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
+import Header from '@/components/header';
+import Content from '@/components/content';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+  display: 'swap',
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -28,7 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 },
               }}
             >
-              <div className="jnksdhadkjaskjdasjh">{children}</div>
+              <Header />
+              <Content>{children}</Content>
             </ConfigProvider>
           </AntdRegistry>
         </NextThemesProvider>
