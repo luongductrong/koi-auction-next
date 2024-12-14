@@ -12,7 +12,7 @@ const { Header } = Layout;
 
 export default function CustomHeader() {
   return (
-    <Header className="fixed top-0 left-0 z-50 w-screen min-h-min py-2 px-0 !bg-white shadow-md shadow-gray-200">
+    <Header className="fixed top-0 left-0 z-50 w-screen min-h-min !bg-white shadow-md shadow-gray-200">
       <div className="relative block w-full">
         <div className="flex flex-row justify-between items-center w-full py-3 px-0">
           <HeaderLogo>Koi Auction</HeaderLogo>

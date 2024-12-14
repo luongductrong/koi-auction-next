@@ -1,6 +1,7 @@
 /** @format */
 
 import React from 'react';
+import { type Metadata } from 'next';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { ConfigProvider } from 'antd';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
@@ -15,9 +16,6 @@ const montserrat = Montserrat({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <title>Koi Auction</title>
-      </head>
       <body className={montserrat.className}>
         <NextThemesProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AntdRegistry>
@@ -30,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 },
               }}
             >
-              {children}
+              <div className="jnksdhadkjaskjdasjh">{children}</div>
             </ConfigProvider>
           </AntdRegistry>
         </NextThemesProvider>
@@ -38,3 +36,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Koi Auction',
+    template: '%s | Koi Auction',
+  },
+  description: 'Explore and bid on beautiful koi fish at Koi Auction.',
+  icons: [
+    { rel: 'icon', url: '/favicon.png' },
+    { rel: 'apple-touch-icon', url: '/favicon.png' },
+  ],
+};

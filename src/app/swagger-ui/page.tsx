@@ -1,37 +1,22 @@
 /** @format */
+import { type Metadata } from 'next';
+import SwaggerContent from './content';
 
-// app/components/ApiDocs.tsx
-'use client';
+export const metadata: Metadata = {
+  title: 'Swagger UI | API Documentation',
+  description: 'Explore the API documentation for Koi Auction application.',
+  icons: [
+    {
+      rel: 'icon',
+      url: '/favicon-swagger.png',
+    },
+    {
+      rel: 'apple-touch-icon',
+      url: '/favicon-swagger.png',
+    },
+  ],
+};
 
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
-import swaggerSpec from '@/app/swagger-ui/swagger';
-import Loading from '@/components/loading';
-
-const SwaggerUI = dynamic(() => import('swagger-ui-react'), {
-  ssr: false,
-  loading: () => (
-    <div className="h-screen w-screen flex justify-center items-center">
-      <Loading color="primary" size="large" textClassName="font-bold">
-        Loading API documentation...
-      </Loading>
-    </div>
-  ), // Loading UI
-});
-
-import 'swagger-ui-react/swagger-ui.css';
-
-export default function ApiDocs() {
-  return (
-    <>
-      <Head>
-        <title>API Documentation</title>
-      </Head>
-      <SwaggerUI spec={swaggerSpec} />
-    </>
-  );
-}
-
-{
-  /* <SwaggerUI url="https://petstore.swagger.io/v2/swagger.json" /> */
+export default function SwaggerPage() {
+  return <SwaggerContent />;
 }
