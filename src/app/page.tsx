@@ -64,6 +64,7 @@ export default function Home() {
           <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
           Go to nextjs.org →
         </a>
+        <a className="text-2xl bg-rose-700">Xin chào</a>
       </footer>
     </div>
   );
