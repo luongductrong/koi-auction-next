@@ -14,7 +14,7 @@ export function LoginForm() {
       <Form.Item
         label="Tên đăng nhập/Email"
         name="username"
-        rules={[{ required: true, message: 'Vui lòng điền tên đăng nhập hoặc mail' }]}
+        rules={[{ required: true, message: 'Vui lòng điền tên đăng nhập hoặc email' }]}
       >
         <Input placeholder="Tên đăng nhập hoặc mail" />
       </Form.Item>
