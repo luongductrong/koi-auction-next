@@ -4,6 +4,8 @@ import '@ant-design/v5-patch-for-react-19';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import './globals.css';
 
+import { AppHeader } from '@/components/app-header';
+
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
@@ -17,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="html">
-      <body className={`${montserrat.className} antialiased bg-white text-black dark:bg-black dark:text-white`}>
+      <body
+        className={`${montserrat.className} antialiased bg-white text-black dark:bg-black dark:text-white w-screen h-screen px-4`}
+      >
+        <AppHeader />
         <AntdRegistry>{children}</AntdRegistry>
       </body>
     </html>
