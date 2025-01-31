@@ -1,3 +1,16 @@
 @import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-primary: #b41712;
+}
+
+/* color for darkmode */
+:root.dark {
+  --color-primary: #12b412;
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+}
