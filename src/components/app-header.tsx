@@ -21,7 +21,7 @@ export function AppHeader() {
           <HeaderMenu />
         </div>
       </header>
-      <div style={{ minHeight: '96px' }} className="_subHeader_1hamw_1"></div>
+      <div className="min-h-24 w-full"></div>
     </>
   );
 }
