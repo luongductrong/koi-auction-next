@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
-import '@ant-design/v5-patch-for-react-19';
-import { AntdRegistry } from '@ant-design/nextjs-registry';
 import './globals.css';
 
 import { AppHeader } from '@/components/app-header';
@@ -23,7 +21,7 @@ export default function RootLayout({
         className={`${montserrat.className} antialiased bg-white text-black dark:bg-black dark:text-white w-screen h-screen px-4`}
       >
         <AppHeader />
-        <AntdRegistry>{children}</AntdRegistry>
+        {children}
       </body>
     </html>
   );
