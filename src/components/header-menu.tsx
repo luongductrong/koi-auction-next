@@ -11,10 +11,10 @@ const texts = {
   about: 'Về chúng tôi',
   contact: 'Liên hệ',
   blog: 'Blog',
-  all_auctions: 'Tất cả cuộc đấu giá',
-  scheduled_auction: 'Cuộc đấu giá sắp diễn ra',
-  ongoing_auction: 'Cuộc đấu giá đang diễn ra',
-  closed_auction: 'Cuộc đấu giá đã kết thúc',
+  allAuctions: 'Tất cả cuộc đấu giá',
+  scheduledAuction: 'Cuộc đấu giá sắp diễn ra',
+  ongoingAuction: 'Cuộc đấu giá đang diễn ra',
+  closedAuction: 'Cuộc đấu giá đã kết thúc',
 };
 
 const menuItems = [
@@ -23,10 +23,10 @@ const menuItems = [
     href: '#',
     icon: <List />,
     children: [
-      { label: texts.all_auctions, href: '/auction' },
-      { label: texts.scheduled_auction, href: '/auction?status=scheduled' },
-      { label: texts.ongoing_auction, href: '/auction?status=ongoing' },
-      { label: texts.closed_auction, href: '/auction?status=closed' },
+      { label: texts.allAuctions, href: '/auction' },
+      { label: texts.scheduledAuction, href: '/auction?status=scheduled' },
+      { label: texts.ongoingAuction, href: '/auction?status=ongoing' },
+      { label: texts.closedAuction, href: '/auction?status=closed' },
     ],
   },
   { label: texts.home, href: '/' },
