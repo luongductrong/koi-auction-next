@@ -42,19 +42,21 @@ export function HeaderMenu() {
 
   return (
     <Root className="relative flex w-fit justify-start">
-      <NavList className="flex items-center list-none bg-white">
+      <NavList className="flex items-center list-none">
         {menuItems.map((item) => (
           <Item key={item.href}>
             {item.children ? (
-              <Trigger className="group flex select-none items-center justify-start gap-1 pl-2 pr-50 py-2 text-sm font-medium bg-red-700 text-white">
+              <Trigger className="group flex select-none items-center justify-start gap-1 pl-2 pr-50 py-2 text-sm font-medium bg-primary text-white dark:bg-txt dark:border dark:text-gray-800">
                 {item.icon}
                 {item.label}
               </Trigger>
             ) : (
               <NavLink asChild>
                 <Link
-                  className={`block select-none mx-3 py-2 text-sm font-medium hover:text-red-700 ${
-                    pathname === item.href ? 'text-red-700 border-b-2 border-red-700' : ''
+                  className={`block select-none mx-3 py-2 text-sm font-medium hover:text-primary dark:hover:text-txt ${
+                    pathname === item.href
+                      ? 'text-primary dark:text-txt border-b-2 border-primary dark:border-txt'
+                      : 'text-txt dark:text-primary'
                   }`}
                   href={item.href}
                 >
@@ -65,12 +67,12 @@ export function HeaderMenu() {
 
             {item.children && (
               <Content className="absolute top-2 left-0">
-                <ul className="w-full flex flex-col bg-white shadow-md py-1">
+                <ul className="w-full flex flex-col bg-bg shadow-md py-1 dark:border dark:border-gray-400">
                   {item.children.map((child) => (
                     <li key={child.href}>
                       <NavLink asChild>
                         <Link
-                          className="w-56 inline-block select-none px-4 py-2 text-sm hover:bg-gray-200"
+                          className="w-56 inline-block select-none px-4 py-2 text-sm hover:bg-gray-200 dark:hover:bg-gray-600"
                           href={child.href}
                         >
                           {child.label}

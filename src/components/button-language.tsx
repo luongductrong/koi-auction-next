@@ -42,8 +42,8 @@ export function ButtonLanguage() {
   return (
     <div className="relative lang-dropdown text-sm">
       <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-2 p-2 rounded-sm cursor-pointer">
-        <Languages className="h-5 w-5 text-gray-800 dark:text-gray-200" />
-        <span className="text-gray-800 dark:text-gray-200 whitespace-nowrap">{currentLanguage.name}</span>
+        <Languages className="h-5 w-5 text-txt" />
+        <span className="text-txt whitespace-nowrap">{currentLanguage.name}</span>
         <ChevronDown
           className={`h-4 w-4 text-gray-600 dark:text-gray-400 transition-transform duration-200 ${
             isOpen ? 'rotate-180' : ''
@@ -53,13 +53,13 @@ export function ButtonLanguage() {
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-md focus:outline-none z-10">
+        <div className="absolute right-0 mt-2 w-48 bg-float shadow-md focus:outline-none z-10 dark:border dark:border-gray-400">
           <div className="py-1">
             {languages.map((lang) => (
               <button
                 key={lang.code}
                 onClick={() => handleLanguageChange(lang.code)}
-                className={`w-full text-left px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors ${
+                className={`w-full text-left px-4 py-2 text-txt hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors ${
                   currentLanguage.code === lang.code ? 'bg-gray-100 dark:bg-gray-700' : ''
                 }`}
               >

@@ -21,15 +21,15 @@ export function HeaderSearch({ placeholder }: HeaderSearchProps) {
   };
 
   return (
-    <div className="group flex items-center w-6/10 justify-between border rounded-sm pl-2 border-stone-300 focus-within:border-red-700 hover:border-red-700">
+    <div className="group flex items-center w-6/10 justify-between border rounded-sm pl-2 border-stone-300 focus-within:border-primary hover:border-primary">
       <input
         type="text"
-        className="w-9/10 focus:outline-none text-sm text-stone-500 focus:text-gray-900"
+        className="w-9/10 focus:outline-none text-sm text-txt/80 focus:text-txt"
         placeholder={placeholder}
         onChange={onChange}
       />
       <Search
-        className="p-2 text-stone-400 group-focus-within:text-red-700 hover:text-red-500 hover:cursor-pointer"
+        className="p-2 text-txt group-focus-within:text-primary hover:text-red-500 hover:cursor-pointer"
         onClick={onSearch}
         size={32}
       />

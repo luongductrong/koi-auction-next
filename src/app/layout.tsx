@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="html overflow-y-scroll scroll-smooth">
-      <body className={`${montserrat.className} antialiased bg-white text-black dark:bg-black dark:text-white w-full`}>
+      <body className={`${montserrat.className} antialiased bg-bg text-txt w-full`}>
         <AppHeader />
         <main className="min-h-[56vh]">{children}</main>
         <AppFooter />

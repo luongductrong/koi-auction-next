@@ -4,13 +4,21 @@
 
 :root {
   --color-primary: oklch(0.505 0.213 27.518); /* --color-red-700 */
+  --color-bg: #fff;
+  --color-txt: #171717;
+  --color-float: #fafafa;
 }
 
 /* color for darkmode */
 :root.dark {
-  --color-primary: #12b412;
+  --color-primary: oklch(0.514 0.222 16.935); /* --color-rose-700 */
+  --color-bg: #000;
+  --color-txt: #ededed;
+  --color-float: #0a0a0a;
 }
 
 @theme {
   --color-primary: var(--color-primary);
+  --color-bg: var(--color-bg);
+  --color-txt: var(--color-txt);
 }

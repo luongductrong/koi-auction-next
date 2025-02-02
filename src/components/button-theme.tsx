@@ -13,7 +13,7 @@ export function ButtonTheme() {
 
   return (
     <button onClick={handleThemeChange} className="p-2 rounded-sm cursor-pointer">
-      {isDark ? <Moon className="h-5 w-5 text-gray-200" /> : <Sun className="h-5 w-5 text-gray-800" />}
+      {isDark ? <Moon className="h-5 w-5 text-txt" /> : <Sun className="h-5 w-5 text-txt" />}
     </button>
   );
 }
