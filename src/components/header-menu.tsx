@@ -41,7 +41,7 @@ export function HeaderMenu() {
   const pathname = usePathname();
 
   return (
-    <Root className="relative flex w-full justify-start">
+    <Root className="relative flex w-fit justify-start">
       <NavList className="flex items-center list-none bg-white">
         {menuItems.map((item) => (
           <Item key={item.href}>
@@ -65,11 +65,14 @@ export function HeaderMenu() {
 
             {item.children && (
               <Content className="absolute top-2 left-0">
-                <ul className="w-full flex flex-col bg-white shadow-md p-2">
+                <ul className="w-full flex flex-col bg-white shadow-md py-1">
                   {item.children.map((child) => (
                     <li key={child.href}>
                       <NavLink asChild>
-                        <Link className="w-56 inline-block select-none p-3 text-sm hover:bg-gray-200" href={child.href}>
+                        <Link
+                          className="w-56 inline-block select-none px-4 py-2 text-sm hover:bg-gray-200"
+                          href={child.href}
+                        >
                           {child.label}
                         </Link>
                       </NavLink>

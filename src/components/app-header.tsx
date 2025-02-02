@@ -2,6 +2,8 @@ import { HeaderLogo } from '@/components/header-logo';
 import { HeaderButton } from '@/components/header-button';
 import { HeaderSearch } from '@/components/header-search';
 import { HeaderMenu } from '@/components/header-menu';
+import { ButtonLanguage } from '@/components/button-language';
+import { ButtonTheme } from '@/components/button-theme';
 
 const texts = {
   headerLogo: 'Koi Auction',
@@ -18,7 +20,13 @@ export function AppHeader() {
             <HeaderSearch placeholder={texts.searchPlaceholder} />
             <HeaderButton />
           </div>
-          <HeaderMenu />
+          <div className="flex justify-between w-full">
+            <HeaderMenu />
+            <div className="flex items-center gap-2">
+              <ButtonTheme />
+              <ButtonLanguage />
+            </div>
+          </div>
         </div>
       </header>
       <div className="min-h-24 w-full"></div>

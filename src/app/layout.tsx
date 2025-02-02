@@ -23,17 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="html">
-      <body
-        className={`${montserrat.className} antialiased bg-white text-black dark:bg-black dark:text-white w-full min-h-screen`}
-      >
+    <html lang="en" className="html overflow-y-scroll scroll-smooth">
+      <body className={`${montserrat.className} antialiased bg-white text-black dark:bg-black dark:text-white w-full`}>
         <AppHeader />
-        {children}
+        <main className="min-h-[56vh]">{children}</main>
         <AppFooter />
         <noscript>
-          <div className="fixed top-0 left-0 right-0 z-50 bg-red-500 text-white text-center p-2">
+          <div className="fixed bottom-0 left-0 right-0 z-100 bg-primary text-white text-center p-2">
             {texts.enableJavaScript}
           </div>
+          <div className="h-10"></div>
         </noscript>
       </body>
     </html>

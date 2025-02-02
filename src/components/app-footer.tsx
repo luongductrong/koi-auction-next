@@ -60,13 +60,20 @@ export function AppFooter() {
 
           <div className="flex flex-col items-center justify-center space-y-2 mt-4">
             <p>
-              <span>&copy; {new Date().getFullYear() || 2025}</span>
               {/* prettier-ignore */}
-              <a href={authorLink} className='underline hover:text-blue-500'>{' '}{texts.author}</a>
+              <span>&copy; {new Date().getFullYear() || 2025}{' '}</span>
+              <a href={authorLink} target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-500">
+                {texts.author}
+              </a>
             </p>
             <p>
               {texts.poweredBy}
-              <a href="https://nextjs.org" className="underline hover:text-blue-500">
+              <a
+                href="https://nextjs.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-blue-500"
+              >
                 {texts.nextjs}
               </a>
             </p>
