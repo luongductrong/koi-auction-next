@@ -42,7 +42,7 @@ export function LoginForm() {
           </Label>
           <Control asChild>
             <input
-              className="mt-2 w-full px-3 leading-7.5 border border-gray-300 rounded-md focus:outline-red-500 hover:border-red-500"
+              className="mt-2 w-full px-3 leading-7.5 border border-gray-300 rounded-md outline-none focus:border-red-500 hover:border-red-500"
               type="text"
               placeholder={texts.usernamePlaceholder}
               required
@@ -66,7 +66,7 @@ export function LoginForm() {
           <div className="relative">
             <Control asChild>
               <input
-                className="mt-2 w-full px-3 leading-7.5 border border-gray-300 rounded-md focus:outline-red-500 hover:border-red-500 pr-10"
+                className="mt-2 w-full px-3 leading-7.5 border border-gray-300 rounded-md outline-none focus:border-red-500 hover:border-red-500 pr-10"
                 type={showPassword ? 'text' : 'password'}
                 placeholder={texts.passwordPlaceholder}
                 required

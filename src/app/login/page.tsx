@@ -14,14 +14,17 @@ const texts = {
 export default function LoginPage() {
   return (
     <div className="login-container flex items-center justify-center h-[90vh]">
-      <div className="login-form w-80 flex flex-wrap items-center justify-around p-4 bg-white rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold text-center text-primary mb-5">{texts.title}</h2>
+      <div className="login-form w-80 flex flex-wrap items-center justify-around p-4 bg-bg rounded-lg shadow-lg shadow-txt/10 dark:border dark:border-gray-400">
+        <h2 className="text-2xl font-bold text-center text-primary dark:text-txt/90 mb-5">{texts.title}</h2>
         <LoginForm />
         <GoogleLogin />
-        <Link href="/forgot-password" className="inline-block mt-4 text-sm text-blue-600 hover:underline">
+        <Link
+          href="/forgot-password"
+          className="inline-block mt-4 text-sm text-blue-600 dark:text-blue-500 hover:underline"
+        >
           {texts.forgotPassword}
         </Link>
-        <Link href="/register" className="inline-block mt-4 text-sm text-blue-600 hover:underline">
+        <Link href="/register" className="inline-block mt-4 text-sm text-blue-600 dark:text-blue-500 hover:underline">
           {texts.register}
         </Link>
       </div>

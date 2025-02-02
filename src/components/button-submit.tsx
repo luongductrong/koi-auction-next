@@ -22,7 +22,7 @@ export function ButtonSubmit({
     <button
       className={`w-full h-10 rounded-md hover:opacity-80 ${isLoading ? 'opacity-75 cursor-not-allowed' : ''} ${
         disabled ? 'bg-gray-200 text-gray-400 border border-gray-300 cursor-not-allowed' : 'bg-primary text-white'
-      } ${className}`}
+      } ${className ? className : ''}`}
       disabled={disabled}
       onClick={onClick}
       {...props}
